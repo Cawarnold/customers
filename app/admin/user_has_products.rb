@@ -1,4 +1,5 @@
 ActiveAdmin.register UserHasProducts do
+  permit_params :platform, :service, :tier
 
 
   # See permitted parameters documentation:
