@@ -29,6 +29,7 @@ class ChildrenController < ApplicationController
   # POST /children.json
   def create
     @child = Child.new(child_params)
+    @child.user = current_user
 
     respond_to do |format|
       if @child.save
