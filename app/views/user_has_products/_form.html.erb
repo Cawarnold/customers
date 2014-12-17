@@ -1,0 +1,29 @@
+<%= form_for(@user_has_product) do |f| %>
+  <% if @user_has_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_has_product.errors.count, "error") %> prohibited this user_has_product from being saved:</h2>
+
+      <ul>
+      <% @user_has_product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :platform %><br>
+    <%= f.text_area :platform %>
+  </div>
+  <div class="field">
+    <%= f.label :service %><br>
+    <%= f.text_area :service %>
+  </div>
+  <div class="field">
+    <%= f.label :tier %><br>
+    <%= f.number_field :tier %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

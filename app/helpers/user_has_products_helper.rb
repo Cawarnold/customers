@@ -1,0 +1,2 @@
+module UserHasProductsHelper
+end
